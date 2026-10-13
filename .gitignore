@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.vercel/
+.test-cache/
+test-results/
+*.rom
+*.nds
+*.gba
+*.3ds
+*.sav

@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "headers": [{
+    "source": "/(.*)",
+    "headers": [
+      {"key":"Cross-Origin-Opener-Policy","value":"same-origin"},
+      {"key":"Cross-Origin-Embedder-Policy","value":"require-corp"},
+      {"key":"Cross-Origin-Resource-Policy","value":"same-origin"},
+      {"key":"X-Content-Type-Options","value":"nosniff"},
+      {"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},
+      {"key":"Permissions-Policy","value":"gamepad=(self), fullscreen=(self)"}
+    ]
+  }],
+  "rewrites": [
+    {"source":"/engine/ds/:path*","destination":"https://cdn.jsdelivr.net/gh/josepilas/pilas-melonds@7adc554ce1dc5318fef3797e8f00a6e9286dac3b/:path*"},
+    {"source":"/engine/stable/:path*","destination":"https://cdn.emulatorjs.org/4.2.3/data/:path*"},
+    {"source":"/engine/next/:path*","destination":"https://cdn.emulatorjs.org/nightly/data/:path*"}
+  ]
+}
